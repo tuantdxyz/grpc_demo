@@ -1,0 +1,18 @@
+syntax = "proto3";
+package helloworld;
+//option java_package = "io.grpc.examples.helloworld";
+
+
+// The greeting service definition.
+service Employee {
+  // get employeeId
+  rpc get_employee(EmployeeReq)  returns (EmployeeRes){}
+}
+
+message EmployeeReq{
+  uint32 id = 1;
+}
+
+message EmployeeRes{
+  uint32 employeeId = 1;
+}
